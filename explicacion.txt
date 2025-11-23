@@ -1,0 +1,17 @@
+Aplicación de los montículos (heaps) en el algoritmo de Dijkstra
+
+El algoritmo de Dijkstra se utiliza para encontrar el camino más corto desde un nodo origen 
+hacia todos los demás nodos en un grafo con pesos no negativos. Durante su ejecución, es 
+necesario seleccionar repetidamente el nodo con la distancia temporal más pequeña.
+
+Problema sin montículo:
+Si se usa una lista común, encontrar el nodo con la distancia mínima cuesta O(n), lo que 
+puede volver al algoritmo O(n²).
+
+Ventaja de usar Min-Heap:
+Usar un montículo mínimo permite obtener el nodo mínimo y actualizar distancias en 
+O(log n), dejando la complejidad total en O((V + E) log V).
+
+Por qué Min-Heap:
+Porque siempre se requiere el nodo pendiente con menor distancia. El Min-Heap garantiza 
+acceso eficiente al mínimo, por lo que es la estructura fundamental detrás de Dijkstra.
